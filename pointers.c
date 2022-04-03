@@ -21,12 +21,14 @@ int main() {
 	
 //---------------------------------------------------------------------------------------------
 
-	int ia[3];							 
+	int ia[3]={0,1,2,3,4,5,8};							 
 	int *iap=&ia[0];
 	
 	// So far so good	
 	*(iap+2)=5;			// ?	In memory array's elements should keep consecutive.
-	printf("%d",ia[2]);	// 		So we can access array elements to use one pointer.
+	printf("%d",ia[2]);		// So we can access array elements to use one pointer.
+	// Also we can use like that.
+	printf("%d",*(ia+2));
 	
 
 	
