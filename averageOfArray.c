@@ -1,16 +1,15 @@
 #include <stdio.h>
-void swap(int *x,int *y);	// First we create a function. 
-void main(){
-    int x=10;
-    int y=15;
-    printf("x= %d y= %d \n",x,y);
-    swap(&x,&y);		// We are calling swap function.
-    
-    printf("x= %d y= %d",x,y);
-    
-}
-void swap(int *x,int *y){	// We are saying to function what it do.
-    int temp=*x;
-    *x=*y;
-    *y=temp;
+int main(){
+	int array[]={10,20,30,40,50};
+	int sum=0;
+	int i;
+	float average;
+	int length=sizeof(array)/sizeof(array[0]);
+	printf("The length of array : %d \n",length);
+	for (i=0;i<length;i++){
+		sum+=array[i];
+	}
+	average=sum/length;
+	printf("The sum of the array: %d \n",sum);
+	printf("The average of the array : %f",average);
 }
